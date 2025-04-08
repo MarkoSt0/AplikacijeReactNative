@@ -6,7 +6,7 @@ import {
   FlatList,
   ActivityIndicator,
 } from "react-native";
-import AppListItem from "../../src/components/core/AppListItem";
+import AppListItem from "@components/core/AppListItem";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
