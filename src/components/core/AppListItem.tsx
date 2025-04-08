@@ -1,14 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
-
+import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Link } from "expo-router";
 type AppListItem = {
   day: number;
 };
 
 export default function AppListItem({ day }: AppListItem) {
   return (
-    <View style={styles.box}>
-      <Text style={styles.text}>{day}</Text>
-    </View>
+    <Link href={`/aplikacija${day}`} asChild>
+      <Pressable style={styles.box}>
+        <Text style={styles.text}>{day}</Text>
+      </Pressable>
+    </Link>
   );
 }
 
