@@ -7,7 +7,6 @@ import {
   ActivityIndicator,
 } from "react-native";
 import AppListItem from "../../src/components/core/AppListItem";
-import { useFonts, Inter_900Black } from "@expo-google-fonts/inter";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
@@ -15,14 +14,6 @@ SplashScreen.preventAutoHideAsync();
 
 const days = [...Array(24)].map((val, index) => index + 1);
 export default function HomeScreen() {
-  const [fontsLoaded, fontsError] = useFonts({ Inter: Inter_900Black });
-
-  useEffect(() => {
-    if (fontsLoaded || fontsError) {
-      SplashScreen.hideAsync();
-    }
-  }, [fontsLoaded, fontsError]);
-
   return (
     <View style={styles.container}>
       <FlatList
