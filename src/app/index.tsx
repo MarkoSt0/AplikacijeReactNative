@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import AppListItem from "@components/core/AppListItem";
 import * as SplashScreen from "expo-splash-screen";
-import { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
